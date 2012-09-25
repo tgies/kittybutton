@@ -5,6 +5,6 @@
 <body>
 <p>kittybutton is a little button you can add to the toolbar of most major web browsers (a "bookmarklet") that you can click any time you need there to be kitty. kittybutton will then replace a random image on the page you are looking at with kitty. go multiple times for multiple kitty. works not so well with some pages, but keep clicking -- kittybutton might not always get it right on the first try! cut it some slack, it's just a kitty</p
 <p>you should be able to just <strong>click and drag the following link to your browser's bookmark toolbar</strong>, which is up there, and you'll get a little button that you can click any time you need kitty.</p>
-<p><a href="javascript:(function(){if(!document.getElementById('k1ttybutt0n')){var head=document.getElementsByTagName('head')[0];var s=document.createElement('script');s.setAttribute('src','http://tgies.net/kittybutton.js');s.setAttribute('id','k1ttybutt0n');head.appendChild(s)}window.kittybutton();}());">kitty</a></p>
+<p><a href="javascript:(function(){if(!document.getElementById('k1ttybutt0n')){var head=document.getElementsByTagName('head')[0],s=document.createElement('script');s.setAttribute('src','http://tgies.net/kittybutton.js');s.setAttribute('id','k1ttybutt0n');s.onload=window.kittybutton;head.appendChild(s);}else{window.kittybutton();}}());">kitty</a></p>
 </body>
 </html>
