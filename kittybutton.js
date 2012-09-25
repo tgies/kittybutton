@@ -1,6 +1,6 @@
-(!function () {
+(window.kittybutton = !function () {
     // kittybutton.js
-    // version 1
+    // version 2
     // ---------
     // (C) 2011 tony gies <tgies@tgies.net>
     // the copyright holder has released this work into the public domain;

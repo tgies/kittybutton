@@ -1,0 +1,1 @@
+javascript:(function(){if(!document.getElementById('k1ttybutt0n')){var head=document.getElementsByTagName('head')[0];var s=document.createElement('script');s.setAttribute('src','http://tgies.net/kittybutton.js');s.setAttribute('id','k1ttybutt0n');head.appendChild(s)}else{window.kittybutton()};}());
