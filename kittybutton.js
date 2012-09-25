@@ -1,4 +1,4 @@
-(window.kittybutton = !function () {
+window.kittybutton = function () {
     // kittybutton.js
     // version 2
     // ---------
@@ -13,17 +13,9 @@
 
 
     function doIt() {
-        jQuery.noConflict();
-        jQuery.jQueryRandom = 0;
-        jQuery.extend(jQuery.expr[":"], {
-            random: function (a, i, m, r) {
-                if (i == 0) {
-                    jQuery.jQueryRandom = Math.floor(Math.random() * r.length);
-                };
-                return i == jQuery.jQueryRandom;
-            }
-        });
-        var elimg = jQuery('img:not(.youreakitty):random');
+        window.kbjQ = jQuery.noConflict();
+        var imgs = kbjQ('img:not(.youreakitty)');
+	var elimg = imgs.eq(Math.floor(Math.random() * imgs.length))
         var imgwidth = elimg.width();
         var imgheight = elimg.height();
         var greykitty = (Math.floor(Math.random() * 2) ? 'g/' : '');
@@ -31,7 +23,7 @@
         elimg.attr('src', 'http://placekitten.com/' + greykitty + imgwidth + '/' + imgheight);
     }
 
-    if (typeof jQuery == 'undefined') {
+    if (typeof kbjQ == 'undefined') {
         script = document.createElement('script');
         script.src = 'http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js';
         script.onload = doIt;
@@ -40,4 +32,4 @@
         doIt();
     }
     // exeunt
-}());
+}
