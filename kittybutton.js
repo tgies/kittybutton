@@ -5,7 +5,9 @@
     // (C) 2011 tony gies <tgies@tgies.net>
     // the copyright holder has released this work into the public domain;
     // any entity is granted the right to use this work for any purpose,
-    // without any conditions, unless such conditions are required by law
+    // without any conditions, unless such conditions are required by law.
+    // this work is distributed "as is" without any warranty;
+    // without even any warranty of mercantability or usefulness.
     // no rights reserved
     // attribution is appreciated if reproduced in entirety
 
