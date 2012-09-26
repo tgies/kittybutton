@@ -29,4 +29,4 @@ window.kittybutton = function () {
         doIt();
     }
     // exeunt
-};
+}; window.kittybutton();
