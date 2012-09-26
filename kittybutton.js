@@ -11,8 +11,6 @@ window.kittybutton = function () {
     // no rights reserved
     // attribution is appreciated if reproduced in entirety
 
-    "use strict";
-
     function doIt() {
         var imgs = window.kbjQ('img:not(img.youreakitty)'),
             elimg = imgs.eq(Math.floor(Math.random() * imgs.length)),
