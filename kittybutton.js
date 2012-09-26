@@ -11,21 +11,21 @@ window.kittybutton = function () {
     // no rights reserved
     // attribution is appreciated if reproduced in entirety
 
+    "use strict";
 
     function doIt() {
-        window.kbjQ = jQuery.noConflict();
-        var imgs = kbjQ('img:not(.youreakitty)');
-        var elimg = imgs.eq(Math.floor(Math.random() * imgs.length));
-        var imgwidth = elimg.width(), imgheight = elimg.height();
-        var greykitty = (Math.floor(Math.random() * 2) ? 'g/' : '');
+        var imgs = window.kbjQ('img:not(img.youreakitty)'),
+            elimg = imgs.eq(Math.floor(Math.random() * imgs.length)),
+            imgwidth = elimg.width(), imgheight = elimg.height(),
+            greykitty = (Math.floor(Math.random() * 2) ? 'g/' : '');
         elimg.addClass('youreakitty');
         elimg.attr('src', 'http://placekitten.com/' + greykitty + imgwidth + '/' + imgheight);
     }
 
-    if (kbjQ === undefined) {
+    if (window.kbjQ === undefined) {
         var script = document.createElement('script');
         script.src = 'http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js';
-        script.onload = doIt;
+        script.onload = function(){window.kbjQ = window.jQuery.noConflict(true); doIt();};
         document.body.appendChild(script);
     } else {
         doIt();
